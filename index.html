@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
 </head>
 
 <body>
     <div class="hero flex-column container-1440">
         <header role="banner" class="flex width-100 justify-between align-center">
-            <img src="images/logo-hydra.png" alt="logo hydra">
-            <nav>
+            <div class="large-2 small-5">
+                <img class="responsive" src="images/logo-hydra.png" alt="logo hydra">
+            </div>
+            <!-- Nav-Desktop -->
+            <nav class="mobile-nav-none">
                 <ul class="flex gap-40px">
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">SERVICES</a></li>
@@ -21,80 +25,83 @@
                     <li><a href="#">HOW TO</a></li>
                 </ul>
             </nav>
-            <div class="flex gap-40px">
+            <div class="flex gap-40px mobile-nav-none">
                 <a class="btn-vide flex align-center" href="#">CONTACT US</a>
                 <a class="btn-plein flex align-center" href="#">JOIN HYDRA</a>
             </div>
+            <!-- Nav-burger -->
+            <div id="openBurger"><span id="burger"></span></div> <!-- Made by MatCode -->
         </header>
         <!-- Contenu hero -->
         <div>
-            <!-- Text hero -->
             <div class="flex justify-between align-center">
-                <div class="large-5 flex hero-txt flex-column gap-40px">
+                <!-- Text hero -->
+                <div class="large-5 small-12 flex hero-txt flex-column gap-40px">
                     <h1><span>Dive</span> Into The Depths<br>Of <span>Virtual Reality</span></h1>
-                    <p>
+                    <p class="responsive-none">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .
                     </p>
                     <div class="flex align-center gap-40px">
                         <a class="btn-plein" href="#">BUILD YOUR WORLD</a>
-                        <img src="images/arrow-right.png" alt="Flech vers la droite">
+                        <img class="responsive-none" src="images/arrow-right.png" alt="Flech vers la droite">
                     </div>
                 </div>
                 <!-- Image hero -->
-                <div class="large-5 hero-img">
+                <div class="large-5 small-12 hero-img">
                     <img class="responsive" src="images/photo-hero.png" alt="Photo d'une femme avec un casque VR">
                 </div>
             </div>
         </div>
         <!-- CTA -->
-        <div class="cta width-100 flex align-center">
-            <div class="flex align-center">
-                <div><img src="images/icon-loc.png" alt=""></div>
-                <div>
-                    <p class="titre-contact bold">Pay Us a Visit</p>
-                    <address>Union St, Seattle, WA 98101, United States</address>
+        <div class="swiper cta width-100 flex align-center">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide justify-center contact flex align-center gap-20px">
+                    <div><img class="responsive" src="images/icon-loc.png" alt=""></div>
+                    <div>
+                        <p class="titre-contact bold">Pay Us a Visit</p>
+                        <address>Union St, Seattle, WA 98101, United States</address>
+                    </div>
+                </div>
+                <div class="swiper-slide justify-center contact flex align-center gap-20px">
+                    <div><img class="responsive" src="images/icon-phone.png" alt=""></div>
+                    <div>
+                        <p class="titre-contact bold">Give Us a Call</p>
+                        <a href="tel:(110) 1111-1010">(110) 1111-1010</a>
+                    </div>
+                </div>
+                <div class="swiper-slide justify-center contact flex align-center gap-20px">
+                    <div><img class="responsive" src="images/icon-mail.png" alt=""></div>
+                    <div>
+                        <p class="titre-contact bold">Send Us a Message</p>
+                        <a href="mailto:Contact@HydraVTech.com">Contact@HydraVTech.com</a>
+                    </div>
                 </div>
             </div>
-            <div class="separation"></div>
-            <div class="flex align-center">
-                <div><img src="images/icon-phone.png" alt=""></div>
-                <div>
-                    <p class="titre-contact bold">Give Us a Call</p>
-                    <a href="tel:(110) 1111-1010">(110) 1111-1010</a>
-                </div>
-            </div>
-            <div class="separation"></div>
-            <div class="flex align-center">
-                <div><img src="images/icon-mail.png" alt=""></div>
-                <div>
-                    <p class="titre-contact bold">Send Us a Message</p>
-                    <a href="mailto:Contact@HydraVTech.com">Contact@HydraVTech.com</a>
-                </div>
-            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
     <main>
         <!-- Introduction to hydra vr -->
-        <div class="container-1440 flex justify-between align-center">
-            <div>
-                <h2><span class="bold">INTRODUCTION</span><br>TO HYDRA VR <img class="align-arrow"
-                        src="images/arrow-right-long.png" alt=""></h2>
-            </div>
-            <p class="large-6">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed
-                pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc.
-                Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla
-                urna porttitor rhoncus vitae.</p>
+        <div class="intro container-1440 flex justify-between align-center">
+            <h2><span class="bold">INTRODUCTION</span><br>TO HYDRA VR <img class="responsive-none" class="align-arrow" src="images/arrow-right-long.png" alt=""></h2>
+            <p class="large-6 responsive-none">
+                Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat                nibh sed
+                pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis                imperdiet massa tincidunt nunc.
+                Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in.               Lectus magna fringilla
+                urna porttitor rhoncus vitae.
+            </p>
         </div>
         <!-- About hydra vr -->
         <div class="about container-1440 flex justify-between align-center">
             <!-- About image -->
-            <div class="about-img large-5">
+            <div class="about-img large-5 small-12">
                 <img class="responsive" src="images/photo-intro.png" alt="">
             </div>
             <!-- About texte -->
-            <div class="about-txt flex flex-column gap-40px large-6">
-                <h2><span class="bold">ABOUT</span><br>HYDRA VR</h2>
+            <div class="about-txt flex flex-column gap-40px large-6 small-12">
+                <h2 class="responsive-none"><span class="bold">ABOUT</span><br>HYDRA VR</h2>
                 <p>
                     Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus urna neque viverra
                     justo. Vivamus at augue eget arcu dictum. Ultrices gravida dictum fusce ut placerat orci. Aenean et
@@ -108,12 +115,11 @@
             </div>
         </div>
         <!-- Why build with hydra -->
-        <div class="container-1440 flex justify-between align-center">
-            <div>
-                <h2><span class="bold">WHY BUILD</span><br>WITH HYDRA? <img class="align-arrow"
-                        src="images/arrow-right-long.png" alt=""></h2>
-            </div>
-            <p class="large-6">
+        <div class="intro container-1440 flex justify-between align-center">
+            <h2>
+                <span class="bold">WHY BUILD</span><br>WITH HYDRA? <img class="responsive-none" class="align-arrow" src="images/arrow-right-long.png" alt="">
+            </h2>
+            <p class="large-6 responsive-none">
                 Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin
                 gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra
                 aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
@@ -121,114 +127,137 @@
             </p>
         </div>
         <!-- Section cartes -->
-        <div class="cartes container-1440 flex justify-between">
-            <!-- Carte 1 -->
-            <div class="carte large-3 flex flex-column gap-20px">
-                <div class="carte-img">
-                    <img class="responsive" src="images/photo-simulation.png" alt="">
+        <div class="cartes container-1440">
+            <div class="swiper swiper-carte">
+                <div class="swiper-wrapper">
+                    <!-- Carte 1 -->
+                    <div class="swiper-slide carte large-3 small-12 flex flex-column gap-20px">
+                        <div class="carte-img">
+                            <img class="responsive" src="images/photo-simulation.png" alt="">
+                        </div>
+                        <h3>SIMULATION</h3>
+                        <div class="separation-horizontal"></div>
+                        <p>
+                            Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo
+                            laoreet sit amet vitae.
+                        </p>
+                        <a class="btn-plein" href="#">TRY IT NOW</a>
+                    </div>
+                    <!-- Carte 2 -->
+                    <div class="swiper-slide carte large-3 small-12 flex flex-column gap-20px">
+                        <div class="carte-img">
+                            <img class="responsive" src="images/photo-education.png" alt="">
+                        </div>
+                        <h3>EDUCATION</h3>
+                        <div class="separation-horizontal"></div>
+                        <p>
+                            Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo
+                            laoreet sit amet vitae.
+                        </p>
+                        <a class="btn-plein" href="#">TRY IT NOW</a>
+                    </div>
+                    <!-- Carte 3 -->
+                    <div class="swiper-slide carte large-3 small-12 flex flex-column gap-20px">
+                        <div class="carte-img">
+                            <img class="responsive" src="images/photo-self-care.png" alt="">
+                        </div>
+                        <h3>SELF-CARE</h3>
+                        <div class="separation-horizontal"></div>
+                        <p>
+                            Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo
+                            laoreet sit amet vitae.
+                        </p>
+                        <a class="btn-plein" href="#">TRY IT NOW</a>
+                    </div>
+                    <!-- Carte 4 -->
+                    <div class="swiper-slide carte large-3 small-12 flex flex-column gap-20px">
+                        <div class="carte-img">
+                            <img class="responsive" src="images/photo-outdoor.png" alt="">
+                        </div>
+                        <h3>OUTDOOR</h3>
+                        <div class="separation-horizontal"></div>
+                        <p>
+                            Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo
+                            laoreet sit amet vitae.
+                        </p>
+                        <a class="btn-plein" href="#">TRY IT NOW</a>
+                    </div>
                 </div>
-                <h3>SIMULATION</h3>
-                <div class="separation-horizontal"></div>
-                <p>
-                    Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo
-                    laoreet sit amet vitae.
-                </p>
-                <a class="btn-plein" href="#">TRY IT NOW</a>
-            </div>
-            <!-- Carte 2 -->
-            <div class="carte large-3 flex flex-column gap-20px">
-                <div class="carte-img">
-                    <img class="responsive" src="images/photo-education.png" alt="">
-                </div>
-                <h3>EDUCATION</h3>
-                <div class="separation-horizontal"></div>
-                <p>
-                    Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo
-                    laoreet sit amet vitae.
-                </p>
-                <a class="btn-plein" href="#">TRY IT NOW</a>
-            </div>
-            <!-- Carte 3 -->
-            <div class="carte large-3 flex flex-column gap-20px">
-                <div class="carte-img">
-                    <img class="responsive" src="images/photo-self-care.png" alt="">
-                </div>
-                <h3>SELF-CARE</h3>
-                <div class="separation-horizontal"></div>
-                <p>
-                    Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo
-                    laoreet sit amet vitae.
-                </p>
-                <a class="btn-plein" href="#">TRY IT NOW</a>
-            </div>
-            <!-- Carte 4 -->
-            <div class="carte large-3 flex flex-column gap-20px">
-                <div class="carte-img">
-                    <img class="responsive" src="images/photo-outdoor.png" alt="">
-                </div>
-                <h3>OUTDOOR</h3>
-                <div class="separation-horizontal"></div>
-                <p>
-                    Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo
-                    laoreet sit amet vitae.
-                </p>
-                <a class="btn-plein" href="#">TRY IT NOW</a>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <!-- Section technologies -->
         <div class="techno container-1440">
-            <img class="responsive" src="images/photo-technologies&hardware.png" alt="">
-            <h2><span class="bold">TECHNOLOGIES & HARDWARE</span><br>USED BY HYDRA VR.</h2>
-            <div class="flex justify-between align-center"><img class="responsive" src="images/chevron-down.png" alt=""></div>
+            <div class="flex justify-center">
+                <h2><span class="bold">TECHNOLOGIES & HARDWARE</span><br>USED BY HYDRA VR.</h2>
+                <div class="responsive-none flex justify-between align-center"><img class="responsive" src="images/chevron-down.png" alt=""></div>
+            </div>
         </div>
         <!-- Section technologies logo -->
-        <div class="techno-logo container-1440 flex justify-around">
-            <img class="responsive" src="images/logo-unreal.png" alt="">
-            <img class="responsive" src="images/logo-unity.png" alt="">
-            <img class="responsive" src="images/logo-oculus.png" alt="">
-            <img class="responsive" src="images/logo-vive.png" alt="">
+        <div class="container-1440">
+            <div class="swiper swiper-techno">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="responsive" src="images/logo-unreal.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="responsive" src="images/logo-unity.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="responsive" src="images/logo-oculus.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="responsive" src="images/logo-vive.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
         <!-- How we build with hydra vr ? -->
-        <div class="container-1440 flex justify-between align-center">
-            <div>
-                <h2><span class="bold">HOW WE BUILD</span><br>WITH HYDRA VR? <img class="align-arrow" src="images/arrow-right-long.png" alt=""></h2>
-            </div>
-            <p class="large-6">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed
+        <div class="intro container-1440 flex justify-between align-center">
+            <h2><span class="bold">HOW WE BUILD</span><br>WITH HYDRA VR? <img class="align-arrow responsive-none" src="images/arrow-right-long.png" alt=""></h2>
+            <p class="large-6 responsive-none">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed
                 pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc.
                 Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla
                 urna porttitor rhoncus vitae.</p>
         </div>
         <!-- Section numéros -->
         <div class="numeros container-1440">
-            <div class="flex justify-around align-center">
-                <div class="flex flex-column align-center">
-                    <div class="numero flex align-center">01</div>
-                    <div class="flex">
-                        <div><img src="./images/arrow-right.png" alt=""></div>
-                        <h3>3D Conception<br>& Design</h3>
+            <div class="swiper swiper-numero">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex flex-column align-center">
+                        <div class="numero flex align-center">01</div>
+                        <div class="flex">
+                            <div><img src="./images/arrow-right.png" alt=""></div>
+                            <h3>3D Conception<br>& Design</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex flex-column align-center">
+                        <div class="numero flex align-center">02</div>
+                        <div class="flex">
+                            <div><img src="./images/arrow-right.png" alt=""></div>
+                            <h3>Interaction<br>Design</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex flex-column align-center">
+                        <div class="numero flex align-center">03</div>
+                        <div class="flex">
+                            <div><img src="./images/arrow-right.png" alt=""></div>
+                            <h3>VR World<br>User Testing</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex flex-column align-center">
+                        <div class="numero flex align-center">04</div>
+                        <div class="flex">
+                            <div><img src="./images/arrow-right.png" alt=""></div>
+                            <h3>Hydra VR<br>Deploy</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-column align-center">
-                    <div class="numero flex align-center">02</div>
-                    <div class="flex">
-                        <div><img src="./images/arrow-right.png" alt=""></div>
-                        <h3>Interaction<br>Design</h3>
-                    </div>
-                </div>
-                <div class="flex flex-column align-center">
-                    <div class="numero flex align-center">03</div>
-                    <div class="flex">
-                        <div><img src="./images/arrow-right.png" alt=""></div>
-                        <h3>VR World<br>User Testing</h3>
-                    </div>
-                </div>
-                <div class="flex flex-column align-center">
-                    <div class="numero flex align-center">04</div>
-                    <div class="flex">
-                        <div><img src="./images/arrow-right.png" alt=""></div>
-                        <h3>Hydra VR<br>Deploy</h3>
-                    </div>
-                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <!-- Section formulaire -->
@@ -256,8 +285,8 @@
             <div>
                 <img src="images/logo-hyrda-solo.png" alt=""> 
             </div>
-            <div class="vertical-separation"></div>
-            <div class="flex">
+            <div class="vertical-separation responsive-none"></div>
+            <div class="flex responsive-none">
                 <ul class="flex flex-column justify-between">
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">SERVICES</a></li>
@@ -266,8 +295,8 @@
                     <li><a href="#">JOIN HYDRA</a></li>
                 </ul>
             </div>
-            <div class="vertical-separation"></div>
-            <div class="flex">
+            <div class="vertical-separation responsive-none"></div>
+            <div class="flex responsive-none">
                 <ul class="flex flex-column justify-between">
                     <li><a href="#">F.A.Q.</a></li>
                     <li><a href="#">SITEMAP</a></li>
@@ -275,7 +304,7 @@
                     <li><a href="#">LICENSES</a></li>
                 </ul>
             </div>
-            <div class="vertical-separation"></div>
+            <div class="vertical-separation responsive-none"></div>
             <div class="flex flex-column justify-between">
                 <p>SOCIALIZE WITH HYDRA</p>
                 <div class="flex justify-between gap-20px">
@@ -294,6 +323,8 @@
             <p class="font-14px bold">2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED</p>
         </div>
     </footer>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

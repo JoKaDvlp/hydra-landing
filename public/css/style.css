@@ -93,6 +93,10 @@ h3 {
   justify-content: space-around;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .align-center {
   align-items: center;
 }
@@ -131,6 +135,10 @@ h3 {
   display: block;
 }
 
+#openBurger {
+  display: none;
+}
+
 .hero {
   height: 100vh;
   display: flex;
@@ -150,14 +158,17 @@ h3 {
 }
 
 .cta {
-  height: 167px;
+  padding: 50px 30px;
   border-radius: 83.5px;
-  justify-content: space-around;
   background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
   box-shadow: 0px 4px 4px rgba(192, 183, 232, 0.01);
 }
-.cta > div {
-  gap: 20px;
+
+.swiper-slide {
+  flex-wrap: nowrap;
+}
+.swiper-slide img {
+  display: block;
 }
 
 .separation {
@@ -215,17 +226,17 @@ h3 {
   position: relative;
   padding-top: 0;
 }
-.techno img {
-  border-radius: 155.5px;
+.techno > div {
+  padding: 70px;
+  border-radius: 114px;
+  background-image: url(../../images/photo-technologies&hardware.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .techno h2 {
-  position: absolute;
   text-align: center;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
 }
-.techno div {
+.techno div div {
   background: linear-gradient(267.61deg, #C0B7E8 -0.6%, #8176AF 98.31%);
   width: 70px;
   height: 70px;
@@ -237,7 +248,7 @@ h3 {
   left: 50%;
   box-shadow: 0 0 0 17px rgba(14, 14, 14, 0.33);
 }
-.techno div img {
+.techno div div img {
   display: block;
 }
 
@@ -264,6 +275,7 @@ h3 {
   color: #343045;
   box-shadow: 0 0 0 17px rgba(0, 0, 0, 0.33);
   margin-bottom: 50px;
+  margin-top: 17px;
 }
 
 .numero-txt img {
@@ -276,7 +288,7 @@ h3 {
 
 .horizontal-separation {
   background: linear-gradient(90deg, #343045 0%, #C0B7E8 35%, #8176AF 69%, #343045 100%);
-  width: 400px;
+  width: 50%;
   height: 2px;
 }
 
@@ -473,6 +485,136 @@ les resolutions d'ecrans*/
   }
   .small-12 {
     width: calc(100% - 0px);
+  }
+}
+@media all and (max-width: 579px) {
+  #openBurger {
+    display: block;
+  }
+  #openBurger #burger {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 4px;
+    background: linear-gradient(90deg, #c0b7e8 -15.79%, #8176af 100%);
+    border-radius: 12px;
+  }
+  #openBurger #burger::after, #openBurger #burger::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    transform-origin: right;
+    right: 0px;
+    background: linear-gradient(90deg, #c0b7e8 -15.79%, #8176af 100%);
+    width: 33px;
+    height: 4px;
+    border-radius: 12px;
+  }
+  #openBurger #burger::after {
+    top: 10px;
+  }
+  #openBurger #burger::before {
+    top: -10px;
+  }
+  .responsive-none {
+    display: none;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h1 span {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .container-1440 {
+    padding: 25px 20px;
+  }
+  .mobile-nav-none {
+    display: none;
+  }
+  .hero {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
+  .hero-img {
+    order: -1;
+  }
+  .hero-txt {
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .titre-contact {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .contact {
+    width: 100%;
+  }
+  .cta {
+    padding: 30px 0;
+  }
+  .cta .swiper-slide {
+    padding: 0 30px;
+  }
+  .intro {
+    justify-content: center;
+  }
+  .about {
+    gap: 40px;
+  }
+  .about-txt {
+    align-items: center;
+  }
+  .about-img img {
+    border-radius: 140px 60px 140px 60px;
+  }
+  .techno > div {
+    padding: 50px 0;
+    border-radius: 60px;
+    background-position: center;
+  }
+  .techno h2 {
+    font-size: 24px;
+  }
+  .techno h2 span {
+    font-size: 16px;
+  }
+  .formulaire {
+    padding: 65px 20px;
+    border-radius: 40px;
+  }
+  .formulaire p {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .formulaire input {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .formulaire button {
+    width: 100%;
+  }
+  .footer {
+    background-position: top;
+    background-size: 150%;
+  }
+  .footer > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer > div :last-child {
+    gap: 20px;
+    align-items: center;
+  }
+  .footer .horizontal-separation {
+    margin-top: 50px;
   }
 }
 

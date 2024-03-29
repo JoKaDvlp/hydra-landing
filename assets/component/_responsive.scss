@@ -1,0 +1,134 @@
+@media all and (max-width: 579px){
+    //Burger
+    #openBurger {
+        display: block;
+        #burger {
+            position: relative;
+            display: inline-block;
+            width: 24px;
+            height: 4px;
+            background: linear-gradient(90deg, #c0b7e8 -15.79%, #8176af 100%);
+            border-radius: 12px;
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                transform-origin: right;
+                right: 0px;
+                background: linear-gradient(90deg, #c0b7e8 -15.79%, #8176af 100%);
+                width: 33px;
+                height: 4px;
+                border-radius: 12px;
+                }
+                &::after {
+                    top: 10px;
+                }
+                &::before {
+                    top: -10px;
+                }
+            }
+    }
+    .responsive-none{
+        display: none;
+    }
+    h1{
+        font-size: 24px;
+        span{
+            font-size: 36px;
+        }
+    }
+    h2{
+        font-size: 26px;
+        text-align: center;
+    }
+    .container-1440{
+        padding: 25px 20px;
+    }
+    .mobile-nav-none{
+        display: none;
+    }
+    .hero{
+        height: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    .hero-img{
+        order: -1;
+    }
+    .hero-txt{
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .titre-contact{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .contact{
+        width: 100%;
+    }
+    .cta{
+        padding: 30px 0;
+        .swiper-slide{
+            padding: 0 30px;
+        }
+    }
+    .intro{
+        justify-content: center;
+    }
+    .about{
+        gap: 40px;
+    }
+    .about-txt{
+        align-items: center;
+    }
+    .about-img img{
+        border-radius: 140px 60px 140px 60px;
+    }
+    .techno{
+        >div{
+            padding: 50px 0;
+            border-radius: 60px;
+            background-position: center;
+        }
+        h2{
+            font-size: 24px;
+            span{
+                font-size: 16px;
+            }
+        }
+    }
+    .formulaire{
+        padding: 65px 20px;
+        border-radius: 40px;
+        p{
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input{
+            height: 50px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        button{
+            width: 100%;
+        }
+    }
+    .footer{
+        background-position: top;
+        background-size: 150%;
+        >div{
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            :last-child{
+                gap: 20px;
+                align-items: center;
+            }
+        }
+        .horizontal-separation{
+            margin-top: 50px;
+        }
+    }
+}
